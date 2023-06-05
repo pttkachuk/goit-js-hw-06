@@ -13,7 +13,7 @@ const images = [
   },
 ];
 
-const listConteiner = document.querySelector("ul.gallery")
+const listConteiner = document.querySelector(".gallery")
 
 const markup = images.map(
   ({ url, alt }) =>
