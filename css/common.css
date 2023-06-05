@@ -30,3 +30,13 @@ button {
   list-style: none;
   gap: 24px;
 }
+/* ///////////////////////////////////// */
+
+.valid {
+  border-color: #4caf50;
+}
+
+.invalid {
+  border-color: #f44336;
+}
+/* ///////////////////////////////////// */
