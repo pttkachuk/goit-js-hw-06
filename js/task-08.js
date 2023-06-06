@@ -1,14 +1,14 @@
 const dataForm = document.querySelector('.login-form');
 
-dataForm.addEventListener('submit', handleDataFormSubmit);
+dataForm.addEventListener('submit', onSubmit);
 
-function handleDataFormSubmit(e) {
-    e.preventDefault();
-    const { elements: { email, password }
-    } = e.currentTarget;
-    if (email.value === '' || password.value === '') {
-        return alert("Please fill in all the fields!")
+function onSubmit(event) {
+    event.preventDefault();
+    const { elements: { email, password } } = event.currentTarget;
+
+    if (email.value === "" || password.value === "") {
+        return alert("Please fill in all the fields!");
     }
-    console.log(`Email: ${email.value}, Password:${password.value}`);
-    e.currentTarget.reset();
+    console.log(`Email: ${email.value}, Password: ${password.value}`);
+    event.currentTarget.reset();
 }
