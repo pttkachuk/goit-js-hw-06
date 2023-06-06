@@ -4,9 +4,11 @@ dataForm.addEventListener('submit', handleDataFormSubmit);
 
 function handleDataFormSubmit(e) {
     e.preventDefault();
-    const { email, password } = e.currentTarget;
+    const { elements: { email, password }
+    } = e.currentTarget;
     if (email.value === '' || password.value === '') {
         return alert("Please fill in all the fields!")
     }
-    e.currentTarget.reset()
+    console.log(`Email: ${email.value}, Password:${password.value}`);
+    e.currentTarget.reset();
 }
